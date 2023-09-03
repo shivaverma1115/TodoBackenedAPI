@@ -20,8 +20,9 @@ app.get("/", (req, res) => {
     res.send({msg:"base API endpoint"})
 })
 
+const Contact = process.env.CONTACT
 app.get("/contact",(req,res)=>{
-    res.send({Number : +91-8004716907})
+    res.send({Number : Contact})
 })
 
 app.post("/signup", async (req, res) => {
@@ -117,6 +118,7 @@ app.delete("/tasks/:taskID", async (req, res) => {
 })
 
 const port = process.env.PORT
+
 app.listen(port, async () => {
     try {
         await connection
