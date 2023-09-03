@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 const Contact = process.env.CONTACT
 app.get("/contact",(req,res)=>{
-    res.send({Number : Contact})
+    res.send({Number : "this is my Mobile number :- "+ Contact})
 })
 
 app.post("/signup", async (req, res) => {
