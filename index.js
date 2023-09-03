@@ -20,6 +20,10 @@ app.get("/", (req, res) => {
     res.send({msg:"base API endpoint"})
 })
 
+app.get("/contact",(req,res)=>{
+    res.send({Number : +91-8004716907})
+})
+
 app.post("/signup", async (req, res) => {
     const { email, password, name, city } = req.body;
     const is_user = await UserModel.findOne({ email: email })
